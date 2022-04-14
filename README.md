@@ -1,2 +1,8 @@
-# hexwatershed_tutorial
-A short course for the HexWatershed model
+# Introduction
+This a short course for the HexWatershed model.
+
+# Requirements
+
+# Suggested reading
+
+# References
