@@ -14,9 +14,12 @@ You need addition tools to visulize some of the model results.
 
 # Step-by-step instruction
 
-1. Create and activate a conda environment for this tutorial
 
-`conda create --name hexwatershed_tutorial python=3.8`
+1. Download additional data files using a internet brower (Chrome recommended)
+
+Download the dem1.tif and lnd_cull_mesh.nc files from
+
+https://rcdemo.pnnl.gov/workshop/
 
 2. Install the HexWatershed C++ component
 
@@ -28,7 +31,9 @@ You need addition tools to visulize some of the model results.
 
 - `make install`
 
-3. Install depedency packages
+3. Create/activate a conda environment and install Python packages
+
+- `conda create --name hexwatershed_tutorial python=3.8`
 
 - `conda install -c conda-forge pyflowline`
 
@@ -40,22 +45,13 @@ On Linux or Mac, you can set it up like this, `.bash_profile` as an example:
 
 `export PROJ_LIB=/people/liao313/.conda/envs/hexwatershed_tutorial/share/proj`
 
-4. Clone this repository
+4. Download this tutorial
 
 `git clone https://github.com/changliao1025/hexwatershed_tutorial.git`
 
-5. Download additional data files using a internet brower (Chrome recommended)
-
-Download the dem1.tif and lnd_cull_mesh.nc files from
-
-https://rcdemo.pnnl.gov/workshop/
-
-6. Run the examples within the `example` folder
+5. Run the examples within the `example` folder
 
 - Depending where you downloaded the data and the example, different configurations are required.
-
-
-
 
 
 # References
