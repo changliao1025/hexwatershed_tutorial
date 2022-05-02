@@ -43,13 +43,15 @@ Because the `GDAL` library is used by this project and the `proj` library is oft
 
 On Linux or Mac, you can set it up like this, `.bash_profile` as an example:
 
-`export PROJ_LIB=/people/liao313/.conda/envs/hexwatershed_tutorial/share/proj`
+`export PROJ_LIB=/people/user/.conda/envs/hexwatershed_tutorial/share/proj`
 
 4. Download this tutorial
 
 `git clone https://github.com/changliao1025/hexwatershed_tutorial.git`
 
 5. Run the examples within the `example` folder
+
+- You need to edit the template configuration file to match with your data set.
 
 - Depending where you downloaded the data and the example, different configurations are required.
 
