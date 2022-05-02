@@ -9,8 +9,9 @@ You need internet connection and several tools to run the examples in the tutori
 - conda 
 - cmake
 - c++ compiler
+- QGIS (optional)
 
-You need addition tools to visulize some of the model results.
+You need addition tools (e.g., QGIS) to visulize some of the model results.
 
 # Step-by-step instruction
 
