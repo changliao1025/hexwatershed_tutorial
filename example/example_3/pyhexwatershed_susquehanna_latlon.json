@@ -19,8 +19,8 @@
     "iFlag_rotation": 0,
     "iFlag_stream_burning_topology": 1, 
     "iFlag_save_elevation": 1,
-    "iCase_index": 2,
-    "iMesh_type": 2,
+    "iCase_index": 1,
+    "iMesh_type": 1,
     "dMissing_value_dem": -9999,
     "dBreach_threshold": 10,
     "dAccumulation_threshold": 100000,
@@ -31,10 +31,10 @@
     "dResolution_degree": 5000,
     "dResolution_meter": 50000,
     "sDate": "20220517",        
-    "sMesh_type": "mpas",       
+    "sMesh_type": "latlon",       
     "sFilename_hexwatershed": "hexwatershed",
     "sFilename_spatial_reference": "/Users/liao313/scratch/hexwatershed/hexwatershed_tutorial/data/susquehanna/input/boundary_proj.shp",
     "sFilename_dem": "/Users/liao313/scratch/hexwatershed/hexwatershed_tutorial/data/susquehanna/input/dem1.tif",
     "sFilename_mesh_netcdf": "/Users/liao313/scratch/hexwatershed/hexwatershed_tutorial/data/susquehanna/input/lnd_cull_mesh.nc",    
-    "sFilename_basins": "/Users/liao313/scratch/hexwatershed/hexwatershed_tutorial/example/example_2/pyflowline_susquehanna_basins.json"    
+    "sFilename_basins": "/Users/liao313/scratch/hexwatershed/hexwatershed_tutorial/example/example_1/pyflowline_susquehanna_basins.json"    
 }

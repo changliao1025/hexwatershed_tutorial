@@ -12,11 +12,11 @@ logging.warning('is the time pyhexwatershed simulation started.')
 
 from pyhexwatershed.classes.pycase import hexwatershedcase
 from pyhexwatershed.pyhexwatershed_read_model_configuration_file import pyhexwatershed_read_model_configuration_file
-from pyhexwatershed.pyhexwatershed_generate_template_configuration_file import pyhexwatershed_generate_template_configuration_file
+
 
 sMesh_type = 'latlon'
-iCase_index = 1
-dResolution_meter=5000
+iCase_index = 3
+dResolution_meter=10000
 sDate='20220517'
 sPath = str( Path().resolve() )
 iFlag_option = 1
@@ -28,8 +28,8 @@ sWorkspace_output=  str(Path(sWorkspace_data)  /  'output')
 
 iFlag_submit = 0
 
-sFilename_configuration_in = realpath( sPath +  '/tests/configurations/pyhexwatershed_susquehanna_latlon.json' )
-       
+
+sFilename_configuration_in = realpath( sPath +  '/example/example_3/pyhexwatershed_susquehanna_latlon.json' )
 
 if os.path.isfile(sFilename_configuration_in):
     print(sFilename_configuration_in)
