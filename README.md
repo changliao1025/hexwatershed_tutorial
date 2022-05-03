@@ -28,7 +28,7 @@ https://rcdemo.pnnl.gov/workshop/
 
 - `cd hexwatershed/build`
 
-- `cmake CMakeLists.txt`
+- `cmake CMakeLists.txt  -DCMAKE_CXX_COMPILER=g++-10`
 
 - `make install`
 
@@ -44,7 +44,14 @@ Because the `GDAL` library is used by this project and the `proj` library is oft
 
 On Linux or Mac, you can set it up like this, `.bash_profile` as an example:
 
+Anaconda:
+
 `export PROJ_LIB=/people/user/.conda/envs/hexwatershed_tutorial/share/proj`
+
+
+Miniconda:
+
+`export PROJ_LIB=/opt/miniconda3/envs/hexwatershed/share/proj`
 
 4. Download this tutorial
 
