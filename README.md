@@ -51,7 +51,7 @@ Anaconda:
 
 Miniconda:
 
-`export PROJ_LIB=/opt/miniconda3/envs/hexwatershed/share/proj`
+`export PROJ_LIB=/opt/miniconda3/envs/hexwatershed_tutorial/share/proj`
 
 4. Download this tutorial
 
