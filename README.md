@@ -28,13 +28,17 @@ https://rcdemo.pnnl.gov/workshop/
 
 - `cd hexwatershed/build`
 
-- `cmake CMakeLists.txt  -DCMAKE_CXX_COMPILER=g++-10`
+- `cmake CMakeLists.txt -DCMAKE_CXX_COMPILER=g++-10`
 
 - `make install`
 
 3. Create/activate a conda environment and install Python packages
 
+- `conda config --set channel_priority strict`
+
 - `conda create --name hexwatershed_tutorial python=3.8`
+
+- `conda install -c conda-forge gdal`
 
 - `conda install -c conda-forge pyflowline`
 
@@ -53,7 +57,7 @@ Miniconda:
 
 `export PROJ_LIB=/opt/miniconda3/envs/hexwatershed_tutorial/share/proj`
 
-4. Download this tutorial
+1. Download this tutorial
 
 `git clone https://github.com/changliao1025/hexwatershed_tutorial.git`
 

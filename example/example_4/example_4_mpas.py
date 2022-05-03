@@ -2,7 +2,6 @@
 import os, sys
 from pathlib import Path
 from os.path import realpath
-import argparse
 import logging
 for handler in logging.root.handlers[:]:
     logging.root.removeHandler(handler)
@@ -12,7 +11,7 @@ logging.warning('is the time pyhexwatershed simulation started.')
 
 from pyhexwatershed.classes.pycase import hexwatershedcase
 from pyhexwatershed.pyhexwatershed_read_model_configuration_file import pyhexwatershed_read_model_configuration_file
-from pyhexwatershed.pyhexwatershed_generate_template_configuration_file import pyhexwatershed_generate_template_configuration_file
+
 
 sMesh_type = 'mpas'
 iCase_index = 1
@@ -20,12 +19,13 @@ dResolution_meter=5000
 sDate='20220517'
 sPath = str( Path().resolve() )
 iFlag_option = 1
+
 sWorkspace_data = realpath( sPath +  '/data/susquehanna' )
-sWorkspace_input =  str(Path(sWorkspace_data)  /  'input')
-sWorkspace_output=  str(Path(sWorkspace_data)  /  'output')
+sWorkspace_input = str(Path(sWorkspace_data)  /  'input')
+sWorkspace_output = str(Path(sWorkspace_data)  /  'output')
 
 
-sFilename_configuration_in = realpath( sPath +  '/tests/configurations/pyhexwatershed_susquehanna_mpas.json' )
+sFilename_configuration_in = realpath( sPath +  '/example/example_4/pyhexwatershed_susquehanna_mpas.json' )
         
 if os.path.isfile(sFilename_configuration_in):
     print(sFilename_configuration_in)
