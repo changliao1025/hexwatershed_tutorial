@@ -14,7 +14,7 @@ from pyhexwatershed.classes.pycase import hexwatershedcase
 from pyhexwatershed.pyhexwatershed_read_model_configuration_file import pyhexwatershed_read_model_configuration_file
 from pyhexwatershed.pyhexwatershed_generate_template_configuration_file import pyhexwatershed_generate_template_configuration_file
 
-sMesh_type = 'latlon'
+sMesh_type = 'square'
 iCase_index = 2
 dResolution_meter=10000
 sDate='20220517'
@@ -29,7 +29,7 @@ sWorkspace_output=  str(Path(sWorkspace_data)  /  'output')
 iFlag_submit = 0
 
 
-sFilename_configuration_in = realpath( sPath +  '/example/example_4/pyhexwatershed_susquehanna_mpas.json' )
+sFilename_configuration_in = realpath( sPath +  '/example/example_2/pyhexwatershed_susquehanna_square.json' )
        
 
 if os.path.isfile(sFilename_configuration_in):
