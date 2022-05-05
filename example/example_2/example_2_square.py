@@ -27,8 +27,6 @@ sWorkspace_input =  str(Path(sWorkspace_data)  /  'input')
 sWorkspace_output=  str(Path(sWorkspace_data)  /  'output')
 
 iFlag_submit = 0
-
-
 sFilename_configuration_in = realpath( sPath +  '/example/example_2/pyhexwatershed_susquehanna_square.json' )
        
 

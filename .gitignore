@@ -127,7 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+.vscode
 output/
 *.nc
 *.tif
 *.tiff
+
