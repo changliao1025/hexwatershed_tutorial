@@ -29,11 +29,17 @@ https://rcdemo.pnnl.gov/workshop/
 
 - `cd hexwatershed/build`
 
-- `cmake CMakeLists.txt -DCMAKE_CXX_COMPILER=g++-10`
+- If you are using brew on MacOS:
+
+   `cmake CMakeLists.txt -DCMAKE_CXX_COMPILER=g++-10`
+
+  If you are on Linux, and the correct g++ is already in the system path
+
+   `cmake CMakeLists.txt`
 
 - `make install`
 
-3. Create/activate a conda environment and install Python packages
+1. Create/activate a conda environment and install Python packages
 
 - `conda config --set channel_priority strict`
 
@@ -56,9 +62,11 @@ Miniconda:
 
 `export PROJ_LIB=/opt/miniconda3/envs/hexwatershed_tutorial/share/proj`
 
-1. Download this tutorial
+4. Download this tutorial
 
 `git clone https://github.com/changliao1025/hexwatershed_tutorial.git`
+
+You also need to copy the compiled hexwatershed binary into the `bin` folder under the repository
 
 5. Run the examples within the `example` folder
 
@@ -79,7 +87,7 @@ Miniconda:
 
 3. Most common issues:
    
-   - GDAL not found, consider using the conda-forge channel 
+   - `GDAL` not found, consider using the `conda-forge` channel 
 
    - `proj` related issue https://github.com/OSGeo/gdal/issues/1546, make sure you correctly set up the `PROJ_LIB`
 
