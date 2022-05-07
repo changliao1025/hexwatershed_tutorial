@@ -39,11 +39,13 @@ https://rcdemo.pnnl.gov/workshop/
 
 - `make install`
 
-1. Create/activate a conda environment and install Python packages
+3. Create/activate a conda environment and install Python packages
 
 - `conda config --set channel_priority strict`
 
 - `conda create --name hexwatershed_tutorial python=3.8`
+
+- `conda activate hexwatershed_tutorial`
 
 - `conda install -c conda-forge gdal`
 
@@ -66,9 +68,11 @@ Miniconda:
 
 `git clone https://github.com/changliao1025/hexwatershed_tutorial.git`
 
-You also need to copy the compiled hexwatershed binary into the `bin` folder under the repository
+You need to copy the compiled hexwatershed binary file into the `bin` folder. 
 
-5. Run the examples within the `example` folder
+You need to copy the downloaded data files into the `input` folder.
+
+1. Run the examples within the `example` folder
 
 - You need to edit the template configuration file to match with your data set paths.
 
@@ -90,8 +94,6 @@ You also need to copy the compiled hexwatershed binary into the `bin` folder und
    - `GDAL` not found, consider using the `conda-forge` channel 
 
    - `proj` related issue https://github.com/OSGeo/gdal/issues/1546, make sure you correctly set up the `PROJ_LIB`
-
-
 
 
 # References
