@@ -47,11 +47,7 @@ https://rcdemo.pnnl.gov/workshop/
 
 - `conda activate hexwatershed_tutorial`
 
-- `conda install -c conda-forge gdal`
-
-- `conda install -c conda-forge pyflowline`
-
-- `pip install hexwatershed`
+- `conda install -c conda-forge hexwatershed`
 
 Because the `GDAL` library is used by this project and the `proj` library is often not configured correctly automatically. 
 On Linux or Mac, you can set it up like this, `.bash_profile` as an example:
@@ -64,7 +60,7 @@ Miniconda:
 
 `export PROJ_LIB=/opt/miniconda3/envs/hexwatershed_tutorial/share/proj`
 
-4. Download this tutorial
+1. Download this tutorial
 
 `git clone https://github.com/changliao1025/hexwatershed_tutorial.git`
 
