@@ -23,7 +23,7 @@ Download the dem1.tif and lnd_cull_mesh.nc files from
 
 https://rcdemo.pnnl.gov/workshop/
 
-2. Install the HexWatershed C++ component
+2. Install the HexWatershed backend C++ component
 
 - `git clone https://github.com/changliao1025/hexwatershed.git`
 
@@ -39,13 +39,18 @@ https://rcdemo.pnnl.gov/workshop/
 
 - `make install`
 
-3. Create/activate a conda environment and install Python packages
+3. Install the frontend Python component: 
+   Create/activate a conda environment and install Python packages
 
 - `conda config --set channel_priority strict`
 
 - `conda create --name hexwatershed_tutorial python=3.8`
 
 - `conda activate hexwatershed_tutorial`
+
+- `conda install -c conda-forge gdal=3.2`
+
+   you can test whether gdal is working using `from osgeo import gdal`
 
 - `conda install -c conda-forge hexwatershed`
 
@@ -60,7 +65,7 @@ Miniconda:
 
 `export PROJ_LIB=/opt/miniconda3/envs/hexwatershed_tutorial/share/proj`
 
-1. Download this tutorial
+4. Download this tutorial
 
 `git clone https://github.com/changliao1025/hexwatershed_tutorial.git`
 
@@ -68,7 +73,7 @@ You need to copy the compiled hexwatershed binary file into the `bin` folder.
 
 You need to copy the downloaded data files into the `input` folder.
 
-1. Run the examples within the `example` folder
+5. Run the examples within the `example` folder
 
 - You need to edit the template configuration file to match with your data set paths.
 
