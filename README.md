@@ -31,7 +31,7 @@ https://rcdemo.pnnl.gov/workshop/
 
 - If you are using brew on MacOS:
 
-   `cmake CMakeLists.txt -DCMAKE_CXX_COMPILER=g++-10`
+   `cmake CMakeLists.txt -DCMAKE_CXX_COMPILER=g++-11`  your homebrew installed g++ may have different versions, check it using `brew info gcc`
 
   If you are on Linux, and the correct g++ is already in the system path
 
@@ -78,6 +78,10 @@ You need to copy the downloaded data files into the `input` folder.
 - You need to edit the template configuration file to match with your data set paths.
 
 - Depending where you downloaded the data and the example, different configurations are required.
+
+6. Output files are stored within both pyflowline (conceptual river network) and hexwatershed (flow direction, etc.) folders. 
+- Visualize the output `geojson` files using `QGIS`. 
+- The `hexwatershed.json` file contains all the flow routing parameters.
 
 # Miscellaneous
 
