@@ -31,7 +31,10 @@ https://rcdemo.pnnl.gov/workshop/
 
 - If you are using brew on MacOS:
 
-   `cmake CMakeLists.txt -DCMAKE_CXX_COMPILER=g++-11`  your homebrew installed g++ may have different versions, check it using `brew info gcc`
+   `cmake CMakeLists.txt -DCMAKE_CXX_COMPILER=g++-11`  
+   
+   Your homebrew installed g++ may have different versions, check it using `brew info gcc`.
+   If your g++ is not in the system path, you may need to update/fix using `brew install gcc`.
 
   If you are on Linux, and the correct g++ is already in the system path
 
