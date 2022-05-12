@@ -29,7 +29,7 @@ https://rcdemo.pnnl.gov/workshop/
 
 - `cd hexwatershed/build`
 
-- If you are using brew on MacOS:
+- If you are using homebrew on MacOS:
 
    `cmake CMakeLists.txt -DCMAKE_CXX_COMPILER=g++-11`  
    
@@ -42,14 +42,14 @@ https://rcdemo.pnnl.gov/workshop/
 
 - `make install`
 
-3. Install the frontend Python component: 
+1. Install the frontend Python component: 
    Create/activate a conda environment and install Python packages
 
 - `conda config --set channel_priority strict`
 
-- `conda create --name hexwatershed_tutorial python=3.8`
+- `conda create --name hexwatershed python=3.8`
 
-- `conda activate hexwatershed_tutorial`
+- `conda activate hexwatershed`
 
 - `conda install -c conda-forge gdal=3.2`
 
@@ -62,13 +62,13 @@ On Linux or Mac, you can set it up like this, `.bash_profile` as an example:
 
 Anaconda:
 
-`export PROJ_LIB=/people/user/.conda/envs/hexwatershed_tutorial/share/proj`
+`export PROJ_LIB=/people/user/.conda/envs/hexwatershed/share/proj`
 
 Miniconda:
 
-`export PROJ_LIB=/opt/miniconda3/envs/hexwatershed_tutorial/share/proj`
+`export PROJ_LIB=/opt/miniconda3/envs/hexwatershed/share/proj`
 
-4. Download this tutorial
+1. Download this tutorial
 
 `git clone https://github.com/changliao1025/hexwatershed_tutorial.git`
 
