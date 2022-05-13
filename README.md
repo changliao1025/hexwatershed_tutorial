@@ -1,6 +1,6 @@
 # Introduction
 
-This a short course for the HexWatershed model.
+This a short course for the  <a href="https://www.hexwatershed.org/">`HexWatershed`</a> model.
 
 For more details, please refer to the HexWatershed documentation (https://hexwatershed.readthedocs.io/).
 
@@ -23,6 +23,19 @@ To install the Python frontend, you need:
 - conda 4.10 and above (anaconda or miniconda)
 
 You need addition tools (e.g., QGIS) to visualize some of the model results.
+Depending on your system, these tools can be obtained from these resources:
+
+|       | MacOS |  Ubuntu | HPC |
+| ----------- | ----------- | -----------| -----------|
+|git | |sudo apt install git-all| |
+|Homebrew      | https://brew.sh/ | | |
+|g++    | brew install gcc | sudo apt-get install g++ | module load gcc|
+|cmake| brew install cmake| https://cmake.org/download/| module load cmake|
+|conda| https://docs.conda.io/en/latest/miniconda.html
+ | https://docs.conda.io/en/latest/miniconda.html
+ | module load anaconda3 |
+
+|VS Code| |https://code.visualstudio.com/ | |
 
 # Step-by-step instruction
 
