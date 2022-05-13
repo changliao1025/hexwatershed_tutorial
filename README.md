@@ -31,9 +31,7 @@ Depending on your system, these tools can be obtained from these resources:
 |Homebrew      | https://brew.sh/ | | |
 |g++    | brew install gcc | sudo apt-get install g++ | module load gcc|
 |cmake| brew install cmake| https://cmake.org/download/| module load cmake|
-|conda| https://docs.conda.io/en/latest/miniconda.html
- | https://docs.conda.io/en/latest/miniconda.html
- | module load anaconda3 |
+|conda| https://docs.conda.io/en/latest/miniconda.html | https://docs.conda.io/en/latest/miniconda.html | module load anaconda3 |
 
 |VS Code| |https://code.visualstudio.com/ | |
 
