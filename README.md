@@ -32,7 +32,6 @@ Depending on your system, these tools can be obtained from these resources:
 |g++    | brew install gcc | sudo apt-get install g++ | module load gcc|
 |cmake| brew install cmake| https://cmake.org/download/| module load cmake|
 |conda| https://docs.conda.io/en/latest/miniconda.html | https://docs.conda.io/en/latest/miniconda.html | module load anaconda3 |
-
 |VS Code| |https://code.visualstudio.com/ | |
 
 # Step-by-step instruction
