@@ -30,7 +30,7 @@ sFilename_configuration_in = realpath( sPath +  '/example/example_4/pyhexwatersh
 if os.path.isfile(sFilename_configuration_in):
     print(sFilename_configuration_in)
 else:
-    print('This shapefile does not exist: ', sFilename_configuration_in )
+    print('This configuration file does not exist: ', sFilename_configuration_in )
     exit()
 oPyhexwatershed = pyhexwatershed_read_model_configuration_file(sFilename_configuration_in,\
     iCase_index_in=iCase_index, sDate_in= sDate, sMesh_type_in= sMesh_type)     
