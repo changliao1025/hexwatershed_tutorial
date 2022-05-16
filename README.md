@@ -144,6 +144,13 @@ You need to copy the downloaded data files into the `input` folder.
 
    - `proj` related issue https://github.com/OSGeo/gdal/issues/1546, make sure you correctly set up the `PROJ_LIB`
 
+# Learn more
+
+1. <a href="https://github.com/dengwirda/jigsaw">`JIGSAW`</a> is the mesh generator that is used to generator the variable resolution meshes.
+
+2. Other meshes such as <a href="https://github.com/sahrk/DGGRID">`DGGrid`</a> will be supported.
+
+3. The depression filling algorithm is modified based the <a href="https://github.com/r-barnes/richdem">`RichDEM`</a> priority-flood depression filling method.
 
 # References
 
