@@ -33,7 +33,7 @@
     "dResolution_meter": 10000,
     "sDate": "20220517",        
     "sMesh_type": "latlon",       
-    "sFilename_hexwatershed": "hexwatershed_linux",
+    "sFilename_hexwatershed": "hexwatershed_mac",
     "sFilename_spatial_reference": "/Users/liao313/scratch/hexwatershed_workshop/hexwatershed_tutorial/data/susquehanna/input/boundary_proj.shp",
     "sFilename_dem": "/Users/liao313/scratch/hexwatershed_workshop/hexwatershed_tutorial/data/susquehanna/input/dem1.tif",
     "sFilename_mesh_netcdf": "/Users/liao313/scratch/hexwatershed_workshop/hexwatershed_tutorial/data/susquehanna/input/lnd_cull_mesh.nc",    
