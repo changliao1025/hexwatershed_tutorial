@@ -2,8 +2,6 @@
 
 This a short course for the  <a href="https://www.hexwatershed.org/">`HexWatershed`</a> model.
 
-For more details, please refer to the HexWatershed documentation (https://hexwatershed.readthedocs.io/).
-
 HexWatershed: a mesh independent flow direction model for hydrologic models.
 
 Spatial discretization is the cornerstone of all spatially-distributed numerical simulations including watershed hydrology. Traditional square grid spatial discretization has several limitations:
@@ -18,7 +16,9 @@ Spatial discretization is the cornerstone of all spatially-distributed numerical
 
 Therefore, we developed a watershed delineation model (HexWatershed) based on the hexagon mesh spatial discretization.
 
-We further improve HexWatershed to fully unstructured mesh-based to support variable-resolution meshes such as the MPAS mesh.
+We further improve HexWatershed to fully unstructured mesh-based to support variable-resolution meshes such as the `MPAS` mesh.
+
+For more details, please refer to the HexWatershed documentation (https://hexwatershed.readthedocs.io/).
 
 # Requirements
 
@@ -42,7 +42,7 @@ You need addition tools (e.g., QGIS) to visualize some of the model results.
 Depending on your system, these tools can be obtained from these resources:
 
 |       | MacOS |  Ubuntu | HPC |
-| ---- | ----------- | -----------| -----------|
+| ---- | ---------- | ---------| ---------|
 |git | |sudo apt install git-all| |
 |Homebrew      | https://brew.sh/ | | |
 |g++    | brew install gcc | sudo apt-get install g++ | module load gcc|
