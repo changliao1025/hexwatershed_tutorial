@@ -14,7 +14,7 @@ from pyhexwatershed.pyhexwatershed_read_model_configuration_file import pyhexwat
 
 
 sMesh_type = 'mpas'
-iCase_index = 4
+iCase_index = 1
 dResolution_meter=5000
 sDate='20220517'
 sPath = str( Path().resolve() )
