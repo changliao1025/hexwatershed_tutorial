@@ -4,6 +4,22 @@ This a short course for the  <a href="https://www.hexwatershed.org/">`HexWatersh
 
 For more details, please refer to the HexWatershed documentation (https://hexwatershed.readthedocs.io/).
 
+HexWatershed: a mesh independent flow direction model for hydrologic models.
+
+Spatial discretization is the cornerstone of all spatially-distributed numerical simulations including watershed hydrology. Traditional square grid spatial discretization has several limitations:
+
+1. It cannot represent adjacency uniformly;
+
+2. It leads to the “island effect” and the diagonal travel path issue in D8 scheme;
+
+3. It cannot provide a spherical coverage without significant spatial distortion;
+
+4. It cannot be coupled with other unstructured mesh-based models such as the oceanic models.
+
+Therefore, we developed a watershed delineation model (HexWatershed) based on the hexagon mesh spatial discretization.
+
+We further improve HexWatershed to fully unstructured mesh-based to support variable-resolution meshes such as the MPAS mesh.
+
 # Requirements
 
 You need internet connection and several tools to run the examples in the tutorial.
