@@ -124,6 +124,22 @@ You need to copy the downloaded data files into the `input` folder.
   
 - The `hexwatershed.json` file contains all the flow routing parameters.
 
+# Behind the scene
+
+In general, `HexWatershed` run the following the algorithms step-by-step.
+
+1. Flowline simplication
+2. Mesh generation
+3. Topology reconstruction
+4. Elevation resampling
+5. Stream burning
+6. Depression filling
+7. Slope calculation
+8. Flow direction
+9. Flow accumulation
+10. River networks
+11. Export outputs
+
 # Miscellaneous
 
 1. Why a hybrid Python and C++ approach?

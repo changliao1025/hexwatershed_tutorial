@@ -15,7 +15,7 @@ from pyhexwatershed.pyhexwatershed_read_model_configuration_file import pyhexwat
 
 
 sMesh_type = 'latlon'
-iCase_index = 6
+iCase_index = 31
 dResolution_meter=10000
 sDate='20220517'
 sPath = str( Path().resolve() )
