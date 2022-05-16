@@ -121,8 +121,10 @@ You need to copy the downloaded data files into the `input` folder.
    Optionally, you can turn on the `iFlag_debug` option in the configuration file to output the `intermediate files`.
 
 3. Most common issues:
+
+   - `conda` cannot create environment, turn off the VPN or bypass it.
    
-   - `GDAL` not found, consider using the `conda-forge` channel 
+   - `GDAL` not found, consider using the `conda-forge` channel or use an earlier version such as 3.2.
 
    - `proj` related issue https://github.com/OSGeo/gdal/issues/1546, make sure you correctly set up the `PROJ_LIB`
 
