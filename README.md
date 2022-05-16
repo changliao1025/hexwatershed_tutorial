@@ -38,7 +38,9 @@ To install the Python frontend, you need:
 
 - conda 4.10 and above (anaconda or miniconda)
 
-- Visual Studio Code with the Python extension to run the examples.
+To run the Python examples in this tutorial, you need
+
+- Visual Studio Code with the Python extension.
 
 You need addition tools (e.g., QGIS) to visualize some of the model results.
 Depending on your system, these tools can be obtained from these resources:
