@@ -15,7 +15,7 @@ from pyhexwatershed.pyhexwatershed_read_model_configuration_file import pyhexwat
 
 
 sMesh_type = 'latlon'
-iCase_index = 3
+iCase_index = 6
 dResolution_meter=10000
 sDate='20220517'
 sPath = str( Path().resolve() )
@@ -34,20 +34,21 @@ sFilename_configuration_in = realpath( sPath +  '/example/example_3/pyhexwatersh
 if os.path.isfile(sFilename_configuration_in):
     print(sFilename_configuration_in)
 else:
-    print('This shapefile does not exist: ', sFilename_configuration_in )
+    print('This configuration does not exist: ', sFilename_configuration_in )
     exit()
 
 oPyhexwatershed = pyhexwatershed_read_model_configuration_file(sFilename_configuration_in,\
     iCase_index_in=iCase_index, sDate_in= sDate, sMesh_type_in= sMesh_type)  
 
 print(oPyhexwatershed.tojson())
-
-oPyhexwatershed.pPyFlowline.aBasin[0].dLatitude_outlet_degree=39.4620
-oPyhexwatershed.pPyFlowline.aBasin[0].dLongitude_outlet_degree=-76.0093
+if oPyhexwatershed.pPyFlowline.iFlag_flowline==1:
+    oPyhexwatershed.pPyFlowline.aBasin[0].dLatitude_outlet_degree=39.4620
+    oPyhexwatershed.pPyFlowline.aBasin[0].dLongitude_outlet_degree=-76.0093
+    
 oPyhexwatershed.setup()
 oPyhexwatershed.pPyFlowline.dLongitude_left= -79
 oPyhexwatershed.pPyFlowline.dLongitude_right= -74.5
-oPyhexwatershed.pPyFlowline.dLatitude_bot= 39.20
+oPyhexwatershed.pPyFlowline.dLatitude_bot= 39.21
 oPyhexwatershed.pPyFlowline.dLatitude_top= 42.8
 aCell = oPyhexwatershed.run_pyflowline()
 aCell_out = oPyhexwatershed.assign_elevation_to_cells()

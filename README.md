@@ -98,7 +98,7 @@ You need to copy the downloaded data files into the `input` folder.
 
 5. Run the examples within the `example` folder
 
-- You need to edit the template configuration file to match with your data set paths.
+- You need to edit the template `configuration` json file to match with your data set paths.
 
 - Depending where you downloaded the data and the example, different configurations are required.
 
@@ -112,10 +112,11 @@ You need to copy the downloaded data files into the `input` folder.
 
 1. Why a hybrid Python and C++ approach?
    
-   Answer: HexWatershed can be run at both regional and global scale, so performance is a factor. Data I/O is much easier in Python so users won't have to build NetCDF or GDAL from the source code.
+   Answer: HexWatershed can be run at both regional and global scale, so performance is a factor. Data I/O is much easier in Python so users won't have to build `NetCDF` or `GDAL` from the source code.
 
 2. What if my model doesn't produce the correct or expected answer?
-   Answer: There are several hidden assumptions within the workflow. For example, if you provide the DEM and river network for two different regions, the program won't be able to tell you that. A visual inspection of your data in important.
+   
+   Answer: There are several hidden assumptions within the workflow. For example, if you provide the DEM and river network for two different regions, the program won't be able to tell you that. A visual inspection of your data is important.
    
    Optionally, you can turn on the `iFlag_debug` option in the configuration file to output the `intermediate files`.
 
