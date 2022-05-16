@@ -150,7 +150,7 @@ You need to copy the downloaded data files into the `input` folder.
 
 2. Other meshes such as <a href="https://github.com/sahrk/DGGRID">`DGGrid`</a> will be supported.
 
-3. The depression filling algorithm is modified based the <a href="https://github.com/r-barnes/richdem">`RichDEM`</a> priority-flood depression filling method.
+3. The depression filling algorithm is modified based on the <a href="https://github.com/r-barnes/richdem">`RichDEM`</a> priority-flood depression filling method.
 
 # References
 
