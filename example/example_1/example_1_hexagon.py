@@ -15,7 +15,7 @@ from pyhexwatershed.pyhexwatershed_read_model_configuration_file import pyhexwat
 from pyhexwatershed.pyhexwatershed_generate_template_configuration_file import pyhexwatershed_generate_template_configuration_file
 
 sMesh_type = 'hexagon'
-iCase_index = 1
+iCase_index = 11
 dResolution_meter=5000
 sDate='20220517'
 sPath = str( Path().resolve() )

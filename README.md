@@ -1,6 +1,6 @@
 # Introduction
 
-This a short course for the  <a href="https://www.hexwatershed.org/">`HexWatershed`</a> model.
+This is a short course for the  <a href="https://www.hexwatershed.org/">`HexWatershed`</a> model.
 
 HexWatershed: a mesh independent flow direction model for hydrologic models.
 
