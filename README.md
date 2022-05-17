@@ -26,7 +26,7 @@ You need internet connection and several tools to run the examples in the tutori
 
 To download the model and the tutorial repository, you need:
 
-- git 
+- git, or download as a zip file.
 
 The whole `HexWatershed` package includes both the C++ backend and Python frontend. 
 To compile and install the C++ backend, you need:
