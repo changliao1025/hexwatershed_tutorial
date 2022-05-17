@@ -15,7 +15,7 @@ from pyhexwatershed.pyhexwatershed_read_model_configuration_file import pyhexwat
 
 
 sMesh_type = 'latlon'
-iCase_index = 33
+iCase_index = 34
 dResolution_meter=10000
 sDate='20220517'
 sPath = str( Path().resolve() )
@@ -48,8 +48,8 @@ if oPyhexwatershed.pPyFlowline.iFlag_flowline==1:
 oPyhexwatershed.setup()
 oPyhexwatershed.pPyFlowline.dLongitude_left= -79
 oPyhexwatershed.pPyFlowline.dLongitude_right= -74.5
-oPyhexwatershed.pPyFlowline.dLatitude_bot= 39.21
-oPyhexwatershed.pPyFlowline.dLatitude_top= 42.8
+oPyhexwatershed.pPyFlowline.dLatitude_bot= 39.53
+oPyhexwatershed.pPyFlowline.dLatitude_top= 42.9
 aCell = oPyhexwatershed.run_pyflowline()
 aCell_out = oPyhexwatershed.assign_elevation_to_cells()
 oPyhexwatershed.pPyFlowline.export()
