@@ -54,6 +54,7 @@ Depending on your system, these tools can be obtained from these resources:
 |conda| https://docs.conda.io/en/latest/miniconda.html | https://docs.conda.io/en/latest/miniconda.html | module load anaconda3 |
 |VS Code| https://code.visualstudio.com/ |https://code.visualstudio.com/ |https://code.visualstudio.com/ |
 
+
 # Step-by-step instruction
 
 1. Download additional data files using an internet browser (Chrome recommended)

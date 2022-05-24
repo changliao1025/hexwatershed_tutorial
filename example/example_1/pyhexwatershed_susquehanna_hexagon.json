@@ -30,7 +30,7 @@
     "dLatitude_bot": 39.00,
     "dLatitude_top": 43.00334,
     "dResolution_degree": 5000,
-    "dResolution_meter": 10000,
+    "dResolution_meter": 5000,
     "sDate": "20220315",        
     "sMesh_type": "hexagon",       
     "sFilename_hexwatershed": "hexwatershed_mac",

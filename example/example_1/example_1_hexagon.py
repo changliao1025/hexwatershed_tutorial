@@ -15,7 +15,7 @@ from pyhexwatershed.pyhexwatershed_read_model_configuration_file import pyhexwat
 from pyhexwatershed.pyhexwatershed_generate_template_configuration_file import pyhexwatershed_generate_template_configuration_file
 
 sMesh_type = 'hexagon'
-iCase_index = 11
+iCase_index = 13
 dResolution_meter=5000
 sDate='20220517'
 sPath = str( Path().resolve() )
@@ -47,7 +47,7 @@ oPyhexwatershed.pPyFlowline.aBasin[0].dLongitude_outlet_degree=-76.0093
 oPyhexwatershed.setup()
 oPyhexwatershed.pPyFlowline.dLongitude_left= -79
 oPyhexwatershed.pPyFlowline.dLongitude_right= -74.5
-oPyhexwatershed.pPyFlowline.dLatitude_bot= 39.20
+oPyhexwatershed.pPyFlowline.dLatitude_bot= 39.54 #39.20
 oPyhexwatershed.pPyFlowline.dLatitude_top= 42.8
 aCell = oPyhexwatershed.run_pyflowline()
 aCell_out = oPyhexwatershed.assign_elevation_to_cells()
