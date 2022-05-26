@@ -26,20 +26,75 @@ You need internet connection and several tools to run the examples in the tutori
 
 To download the model and the tutorial repository, you need:
 
+- git, or download as a zip file.
+
+The whole `HexWatershed` package includes both the C++ backend and Python frontend. 
+To compile and install the C++ backend, you need:
+
+- C++ compiler, i.e., g++ 8.1.0 and above
+- cmake 3.10 and above
+
+To install the Python frontend, you need:
+
 - conda 4.10 and above (anaconda or miniconda)
 
+To run the Python examples in this tutorial, you need
+
+- Visual Studio Code with the Python extension.
+
 You need addition tools (e.g., QGIS) to visualize some of the model results.
+Depending on your system, these tools can be obtained from these resources:
+
+|       | MacOS |  Ubuntu | HPC |
+| ---- | ---------- | ---------| ---------|
+|git | |sudo apt install git-all| |
+|Homebrew      | https://brew.sh/ | | |
+|g++    | brew install gcc | sudo apt-get install g++ | module load gcc|
+|cmake| brew install cmake| https://cmake.org/download/| module load cmake|
+|conda| https://docs.conda.io/en/latest/miniconda.html | https://docs.conda.io/en/latest/miniconda.html | module load anaconda3 |
+|VS Code| https://code.visualstudio.com/ |https://code.visualstudio.com/ |https://code.visualstudio.com/ |
+
 
 # Step-by-step instruction
 
+1. Download additional data files using an internet browser (Chrome recommended)
 
-1. Install the HexWatershed Python package 
+Download the `dem1.tif` and `lnd_cull_mesh.nc` files from the following url:
+
+https://rcdemo.pnnl.gov/workshop/
+
+2. Install the HexWatershed backend C++ component
+
+- `git clone https://github.com/changliao1025/hexwatershed.git`
+
+- `cd hexwatershed/build`
+
+- If you are on MacOS, it is recommended to use the <a href="https://brew.sh/">`Homebrew`</a> to setup the g++ and cmake. 
+
+   `cmake CMakeLists.txt -DCMAKE_CXX_COMPILER=g++-11`  
+   
+   Your homebrew installed g++ may have different versions, check it using `brew info gcc`.
+   If your g++ is not in the system path, you may need to update/fix using `brew install gcc`.
+
+   If you are on Linux, and the correct g++ is already in the system path
+
+   `cmake CMakeLists.txt`
+
+- `make install`
+
+3. Install the HexWatershed frontend Python package 
    
    Create/activate a conda environment and install Python packages
+
+- `conda config --set channel_priority strict`
 
 - `conda create --name hexwatershed python=3.8`
 
 - `conda activate hexwatershed`
+
+- `conda install -c conda-forge gdal=3.2`
+
+   you can test whether `gdal` is working using `from osgeo import gdal` in a Python session
 
 - `conda install -c conda-forge hexwatershed`
 
@@ -54,17 +109,21 @@ Miniconda:
 
 `export PROJ_LIB=/opt/miniconda3/envs/hexwatershed/share/proj`
 
-2. Download this tutorial
+4. Download this tutorial
 
 `git clone https://github.com/changliao1025/hexwatershed_tutorial.git`
 
-3. Run the examples within the `example` folder
+You need to copy the compiled hexwatershed binary file into the `bin` folder. 
+
+You need to copy the downloaded data files into the `input` folder.
+
+5. Run the examples within the `example` folder
 
 - You need to edit the template `configuration` json file to match with your data set paths.
 
 - Depending where you downloaded the data and the example, different configurations are required.
 
-4. Output files are stored within both `pyflowline` (conceptual river network) and `hexwatershed` (flow direction, etc.) folders. 
+6. Output files are stored within both `pyflowline` (conceptual river network) and `hexwatershed` (flow direction, etc.) folders. 
    
 - Visualize the output `geojson` files using `QGIS`. 
   
