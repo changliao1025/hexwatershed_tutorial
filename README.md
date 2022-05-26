@@ -12,7 +12,7 @@ You need internet connection to install the  through the Python Pip or Conda (re
 
 You can use the Visual Studio Code to run the Python examples.
 
-You QGIS to visualize some of the model results.
+You can use QGIS to visualize some of the model results.
 
 # Step-by-step instruction
 
