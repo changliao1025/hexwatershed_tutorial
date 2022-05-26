@@ -27,7 +27,7 @@ You can use QGIS to visualize some of the model results.
 
 2. Download this tutorial
 
-`git clone https://github.com/changliao1025/hexwatershed_tutorial.git`
+   `git clone https://github.com/changliao1025/hexwatershed_tutorial.git`
 
 3. Run the examples within the `example` folder
 
