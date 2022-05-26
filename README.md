@@ -4,38 +4,20 @@ This is a short course for the  <a href="https://www.hexwatershed.org/">`HexWate
 
 HexWatershed: a mesh independent flow direction model for hydrologic models.
 
-Spatial discretization is the cornerstone of all spatially-distributed numerical simulations including watershed hydrology. Traditional square grid spatial discretization has several limitations:
-
-1. It cannot represent adjacency uniformly;
-
-2. It leads to the “island effect” and the diagonal travel path issue in D8 scheme;
-
-3. It cannot provide a spherical coverage without significant spatial distortion;
-
-4. It cannot be coupled with other unstructured mesh-based models such as the oceanic models.
-
-Therefore, we developed a watershed delineation model (HexWatershed) based on the hexagon mesh spatial discretization.
-
-We further improve HexWatershed to fully unstructured mesh-based to support variable-resolution meshes such as the `MPAS` mesh.
-
-For more details, please refer to the HexWatershed documentation (https://hexwatershed.readthedocs.io/).
+For full details of the model, please refer to our papers and the HexWatershed documentation (https://hexwatershed.readthedocs.io/).
 
 # Requirements
 
-You need internet connection and several tools to run the examples in the tutorial.
+You need internet connection to install the  through the Python Pip or Conda (recommended) system.
 
-To download the model and the tutorial repository, you need:
+You can use the Visual Studio Code to run the Python examples.
 
-- conda 4.10 and above (anaconda or miniconda)
-
-You need addition tools (e.g., QGIS) to visualize some of the model results.
+You QGIS to visualize some of the model results.
 
 # Step-by-step instruction
 
 
-1. Install the HexWatershed Python package 
-   
-   Create/activate a conda environment and install Python packages
+1. Install the HexWatershed Python package through Conda
 
 - `conda create --name hexwatershed python=3.8`
 
@@ -43,68 +25,51 @@ You need addition tools (e.g., QGIS) to visualize some of the model results.
 
 - `conda install -c conda-forge hexwatershed`
 
-Because the `GDAL` library is used by this project and the `proj` library is often not configured correctly automatically. 
-On Linux or Mac, you can set it up using the `.bash_profile` such as:
-
-Anaconda:
-
-`export PROJ_LIB=/people/user/.conda/envs/hexwatershed/share/proj`
-
-Miniconda:
-
-`export PROJ_LIB=/opt/miniconda3/envs/hexwatershed/share/proj`
-
 2. Download this tutorial
 
 `git clone https://github.com/changliao1025/hexwatershed_tutorial.git`
 
 3. Run the examples within the `example` folder
 
-- You need to edit the template `configuration` json file to match with your data set paths.
+- Edit the template `configuration` json file to match with your data set paths.
 
-- Depending where you downloaded the data and the example, different configurations are required.
-
-4. Output files are stored within both `pyflowline` (conceptual river network) and `hexwatershed` (flow direction, etc.) folders. 
+4. View and visualize model output files.
    
-- Visualize the output `geojson` files using `QGIS`. 
+- View normal json file using any text editor such as VS Code.
+
+- Visualize `geojson` files using `QGIS`. 
   
-- The `hexwatershed.json` file contains all the flow routing parameters.
 
-# Behind the scene
+# FAQ
 
-In general, `HexWatershed` run the following the algorithms step-by-step.
-
-1. Flowline simplication
-2. Mesh generation
-3. Topology reconstruction
-4. Elevation resampling
-5. Stream burning
-6. Depression filling
-7. Slope calculation
-8. Flow direction
-9. Flow accumulation
-10. River networks
-11. Export outputs
-
-# Miscellaneous
-
-1. Why a hybrid Python and C++ approach?
+1. Why my `conda` cannot create environment?
    
-   Answer: HexWatershed can be run at both regional and global scale, so performance is a factor. Data I/O is much easier in Python so users won't have to build `NetCDF` or `GDAL` from the source code.
+   Turn off the VPN or bypass it.
 
-2. What if my model doesn't produce the correct or expected answer?
+2. Why import `GDAL` failed?
+   
+   Consider using the `conda-forge` channel.
+
+3. `proj` related issue https://github.com/OSGeo/gdal/issues/1546, 
+   
+   Make sure you correctly set up the `PROJ_LIB`
+
+   Because the `GDAL` library is used by this project and the `proj` library is often not configured correctly automatically. 
+   On Linux or Mac, you can set it up using the `.bash_profile` such as:
+
+   Anaconda:
+
+   `export PROJ_LIB=/people/user/.conda/envs/hexwatershed/share/proj`
+
+   Miniconda:
+
+   `export PROJ_LIB=/opt/miniconda3/envs/hexwatershed/share/proj`
+
+4. What if my model doesn't produce the correct or expected answer?
    
    Answer: There are several hidden assumptions within the workflow. For example, if you provide the DEM and river network for two different regions, the program won't be able to tell you that. A visual inspection of your data is important.
    
    Optionally, you can turn on the `iFlag_debug` option in the configuration file to output the `intermediate files`.
-
-3. Most common issues:
-
-   - `conda` cannot create environment, turn off the VPN or bypass it.
-   
-   - `GDAL` not found, consider using the `conda-forge` channel or use an earlier version such as 3.2.
-
-   - `proj` related issue https://github.com/OSGeo/gdal/issues/1546, make sure you correctly set up the `PROJ_LIB`
 
 # Learn more
 
