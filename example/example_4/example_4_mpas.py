@@ -20,7 +20,7 @@ from pyhexwatershed.pyhexwatershed_read_model_configuration_file import pyhexwat
 #type of mesh 
 sMesh_type = 'mpas' 
 #assign an index for the case simulation
-iCase_index = 42
+iCase_index = 43
 #the desired spatial resolution in meter, since it is a MPAS variable resolution, this parameter is not effective in this case
 dResolution_meter=5000
 #add the date stamp to the case simulation

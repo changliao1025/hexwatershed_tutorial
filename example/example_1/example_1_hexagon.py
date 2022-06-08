@@ -15,9 +15,9 @@ from pyhexwatershed.pyhexwatershed_read_model_configuration_file import pyhexwat
 from pyhexwatershed.pyhexwatershed_generate_template_configuration_file import pyhexwatershed_generate_template_configuration_file
 
 sMesh_type = 'hexagon'
-iCase_index = 13
+iCase_index = 16
 dResolution_meter=5000
-sDate='20220517'
+sDate='20220518'
 sPath = str( Path().resolve() )
 iFlag_option = 1
 sWorkspace_data = realpath( sPath +  '/data/susquehanna' )

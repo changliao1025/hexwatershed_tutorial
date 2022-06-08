@@ -2,9 +2,9 @@
     "sFilename_model_configuration": "",
     "sModel": "pyhexwatershed",
     "sRegion": "susquehanna",  
-    "sWorkspace_bin": "/Users/liao313/scratch/hexwatershed/hexwatershed_tutorial/bin",  
-    "sWorkspace_input": "/Users/liao313/scratch/hexwatershed/hexwatershed_tutorial/data/susquehanna/input",
-    "sWorkspace_output": "/Users/liao313/scratch/hexwatershed/hexwatershed_tutorial/data/susquehanna/output",
+    "sWorkspace_bin": "/qfs/people/liao313/workspace/python/hexwatershed_tutorial//bin",  
+    "sWorkspace_input": "/qfs/people/liao313/workspace/python/hexwatershed_tutorial//data/susquehanna/input",
+    "sWorkspace_output": "/qfs/people/liao313/workspace/python/hexwatershed_tutorial//data/susquehanna/output",
     "sJob": "hexwatershed",
     "iFlag_create_mesh": 1,
     "iFlag_save_mesh" :1 ,
@@ -33,9 +33,9 @@
     "dResolution_meter": 10000,
     "sDate": "20220517",        
     "sMesh_type": "mpas",       
-    "sFilename_hexwatershed": "hexwatershed",
-    "sFilename_spatial_reference": "/Users/liao313/scratch/hexwatershed/hexwatershed_tutorial/data/susquehanna/input/boundary_proj.shp",
-    "sFilename_dem": "/Users/liao313/scratch/hexwatershed/hexwatershed_tutorial/data/susquehanna/input/dem1.tif",
-    "sFilename_mesh_netcdf": "/Users/liao313/scratch/hexwatershed/hexwatershed_tutorial/data/susquehanna/input/lnd_cull_mesh.nc",    
-    "sFilename_basins": "/Users/liao313/scratch/hexwatershed/hexwatershed_tutorial/example/example_2/pyflowline_susquehanna_basins.json"    
+    "sFilename_hexwatershed": "hexwatershed_linux",
+    "sFilename_spatial_reference": "/qfs/people/liao313/workspace/python/hexwatershed_tutorial//data/susquehanna/input/boundary_proj.shp",
+    "sFilename_dem": "/qfs/people/liao313/workspace/python/hexwatershed_tutorial//data/susquehanna/input/dem1.tif",
+    "sFilename_mesh_netcdf": "/qfs/people/liao313/workspace/python/hexwatershed_tutorial//data/susquehanna/input/lnd_cull_mesh.nc",    
+    "sFilename_basins": "/qfs/people/liao313/workspace/python/hexwatershed_tutorial//example/example_2/pyflowline_susquehanna_basins.json"    
 }

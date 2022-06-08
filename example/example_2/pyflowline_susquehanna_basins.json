@@ -8,9 +8,9 @@
         "iFlag_disconnected": 0,
         "lBasinID": 1,
         "sFilename_dam": "/qfs/people/liao313/data/hexwatershed/susquehanna/auxiliary/ICoM_dams.csv",
-        "sFilename_flowline_filter": "/Users/liao313/scratch/hexwatershed/hexwatershed_tutorial/data/susquehanna/input/streamord7above.shp",
-        "sFilename_flowline_raw": "/Users/liao313/scratch/hexwatershed/hexwatershed_tutorial/data/susquehanna/input/allflowline.shp",
-        "sFilename_flowline_topo": "/Users/liao313/scratch/hexwatershed/hexwatershed_tutorial/data/susquehanna/input/flowline.csv"
+        "sFilename_flowline_filter": "/qfs/people/liao313/workspace/python/hexwatershed_tutorial//data/susquehanna/input/flowline.geojson",
+        "sFilename_flowline_raw": "/qfs/people/liao313/workspace/python/hexwatershed_tutorial//data/susquehanna/input/allflowline.shp",
+        "sFilename_flowline_topo": "/qfs/people/liao313/workspace/python/hexwatershed_tutorial//data/susquehanna/input/flowline.csv"
         
     
     }
