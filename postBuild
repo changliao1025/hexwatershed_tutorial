@@ -49,6 +49,7 @@ cd hexwatershed                         # enter the cloned repo
 if [ -d "build" ]; then
   rm -rf build
 fi
+mkdir build                          # Make a directory to compile into
 cd build                             # Switch into build directory
 cmake -DCMAKE_BUILD_TYPE=Release ..  # Prepare to compile
 make                                 # Build code.
