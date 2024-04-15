@@ -1,3 +1,5 @@
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/changliao1025/hexwatershed_tutorial/main?labpath=notebooks%2Fdggrid%2Fdggrid_example.ipynb)
+
 # Introduction
 
 This is a short course for the  <a href="https://www.hexwatershed.org/">`HexWatershed`</a> model.
