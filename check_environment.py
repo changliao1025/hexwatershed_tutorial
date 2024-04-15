@@ -1,6 +1,6 @@
 import importlib
 
-packages = ['pyearth', 'cartopy', 'matplotlib', 'numpy']
+packages = ['pyearth', 'cartopy', 'matplotlib', 'numpy','geopandas','libgdal-arrow-parquet','pyearth','pyflowline']
 
 bad = []
 for package in packages:
