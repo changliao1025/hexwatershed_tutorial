@@ -1,10 +1,7 @@
-name: hexwatershed-environment
 channels:
   - conda-forge
 dependencies:
-  - python
-  - pip
-  - numpy
-  - gdal=3.2
-  - pyflowline
-  - hexwatershed
+  - python>3.10
+  - cmake
+  - make
+

@@ -4,6 +4,10 @@ set -ex
 #set up conda environment not needed
 
 #change directory to the external folder
+#check external folder, create it if not exist
+if [ ! -d "external" ]; then
+  mkdir external
+fi
 cd external
 
 sPath_external=$(pwd)
