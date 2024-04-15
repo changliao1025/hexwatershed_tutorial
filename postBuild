@@ -35,6 +35,7 @@ cd $sFolder_bin
 echo "dggrid model is compiled successfully!"
 
 #compile hexwatershed model
+cd $sPath_external
 
 #check whether the folder DGGRID exists or not, if exist, delete it
 if [ -d "hexwatershed" ]; then
@@ -45,7 +46,9 @@ sHexwatershed_url='https://github.com/changliao1025/hexwatershed.git'
 git clone $sHexwatershed_url
 #change directory to the DGGRID folder  
 cd hexwatershed                         # enter the cloned repo
-mkdir build                          # Make a directory to compile into
+if [ -d "build" ]; then
+  rm -rf build
+fi
 cd build                             # Switch into build directory
 cmake -DCMAKE_BUILD_TYPE=Release ..  # Prepare to compile
 make                                 # Build code.
