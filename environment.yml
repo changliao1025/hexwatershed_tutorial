@@ -11,6 +11,7 @@ dependencies:
   - cartopy
   - geopandas
   - libgdal-arrow-parquet
-  - pyearth
-  - pyflowline
+  - pyearth>=0.1.24
+  - pyflowline>=0.3.8
+  - hexwatershed>=0.2.28
 
