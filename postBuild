@@ -44,7 +44,7 @@ cd $sFolder_bin
 echo "dggrid model is compiled successfully!"
 
 # Copy the dggrid binary to /home/jovyan/.
-cp src/apps/dggrid/dggrid /home/jovyan/
+cp dggrid /home/jovyan/
 #cp dggrid $sPath_bin/
 
 #compile hexwatershed model
