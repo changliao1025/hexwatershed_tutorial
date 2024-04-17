@@ -134,3 +134,6 @@ output/
 *.tif
 *.tiff
 
+external/
+bin
+
