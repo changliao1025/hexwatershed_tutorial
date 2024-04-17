@@ -12,7 +12,6 @@ logging.warning('is the time pyhexwatershed simulation started.')
 
 from pyhexwatershed.classes.pycase import hexwatershedcase
 from pyhexwatershed.pyhexwatershed_read_model_configuration_file import pyhexwatershed_read_model_configuration_file
-from pyhexwatershed.pyhexwatershed_generate_template_configuration_file import pyhexwatershed_generate_template_configuration_file
 
 sMesh_type = 'hexagon'
 iCase_index = 16
