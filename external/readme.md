@@ -1,1 +1,0 @@
-This is the folder for the external libraries, including dggrid, jigsaw, and hexwatershed.

@@ -135,5 +135,5 @@ output/
 *.tiff
 
 external/
-bin
+bin/
 
