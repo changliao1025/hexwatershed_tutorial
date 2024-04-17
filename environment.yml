@@ -3,6 +3,7 @@ channels:
   - conda-forge
 dependencies:
   - python
+  - jupyterlab
   - cmake
   - make
   - numpy
