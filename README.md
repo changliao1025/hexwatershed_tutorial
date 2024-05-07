@@ -1,4 +1,4 @@
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/changliao1025/hexwatershed_tutorial/main?labpath=notebooks%2Fdggrid%2Fdggrid_example.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/changliao1025/hexwatershed_tutorial/HEAD?labpath=notebooks%2Fyukon%2Fdggrid_example.ipynb) (right click to open in a new window)
 
 # Introduction
 
@@ -36,27 +36,27 @@ You can use QGIS to visualize some of the model results.
 - Edit the template `configuration` json file to match with your data set paths.
 
 4. View and visualize model output files.
-   
+
 - View normal json file using any text editor such as VS Code.
 
-- Visualize `geojson` files using `QGIS`. 
-  
+- Visualize `geojson` files using `QGIS`.
+
 
 # FAQ
 
 1. Why my `conda` cannot create environment?
-   
+
    Turn off the VPN or bypass it.
 
 2. Why import `GDAL` failed?
-   
+
    Consider using the `conda-forge` channel.
 
-3. `proj` related issue https://github.com/OSGeo/gdal/issues/1546, 
-   
+3. `proj` related issue https://github.com/OSGeo/gdal/issues/1546,
+
    Make sure you correctly set up the `PROJ_LIB`
 
-   Because the `GDAL` library is used by this project and the `proj` library is often not configured correctly automatically. 
+   Because the `GDAL` library is used by this project and the `proj` library is often not configured correctly automatically.
    On Linux or Mac, you can set it up using the `.bash_profile` such as:
 
    Anaconda:
@@ -68,9 +68,9 @@ You can use QGIS to visualize some of the model results.
    `export PROJ_LIB=/opt/miniconda3/envs/hexwatershed/share/proj`
 
 4. What if my model doesn't produce the correct or expected answer?
-   
+
    Answer: There are several hidden assumptions within the workflow. For example, if you provide the DEM and river network for two different regions, the program won't be able to tell you that. A visual inspection of your data is important.
-   
+
    Optionally, you can turn on the `iFlag_debug` option in the configuration file to output the `intermediate files`.
 
 # Learn more
@@ -85,7 +85,7 @@ You can use QGIS to visualize some of the model results.
 
 # References
 
-* Liao, Chang, Tian Zhou, Donghui Xu, Richard Barnes, Gautam Bisht, Hong-Yi Li, Zeli Tan, et al. (02/2022AD) 2022. “Advances In Hexagon Mesh-Based Flow Direction Modeling”. Advances In Water Resources 160. Elsevier BV: 104099. 
+* Liao, Chang, Tian Zhou, Donghui Xu, Richard Barnes, Gautam Bisht, Hong-Yi Li, Zeli Tan, et al. (02/2022AD) 2022. “Advances In Hexagon Mesh-Based Flow Direction Modeling”. Advances In Water Resources 160. Elsevier BV: 104099.
 https://doi.org/10.1016/j.advwatres.2021.104099.
 
 * Liao, C., Tesfa, T., Duan, Z., & Leung, L. R. (2020). Watershed delineation on a hexagonal mesh grid. Environmental Modelling & Software, 128, 104702. https://doi.org/10.1016/j.envsoft.2020.104702
