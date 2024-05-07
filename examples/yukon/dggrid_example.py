@@ -55,6 +55,8 @@ if os.path.exists(sWorkspace_input):
     shutil.rmtree(sWorkspace_input)
 
 shutil.copytree(sPath_temp_data, sWorkspace_input)
+#delte the temp folder
+shutil.rmtree(sPath_temp)
 
 #an example of the configuration file are provided in the input folder
 sFilename_configuration_in = realpath( sWorkspace_input +  '/pyhexwatershed_yukon_dggrid.json' )
