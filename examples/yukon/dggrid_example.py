@@ -18,7 +18,7 @@ from pyhexwatershed.configuration.change_json_key_value import change_json_key_v
 from pyhexwatershed.configuration.read_configuration_file import pyhexwatershed_read_configuration_file #this function is used to read the model configuration file
 
 sPath_parent = Path().resolve()
-
+print(sPath_parent)
 
 sWorkspace_data = os.path.join( sPath_parent ,  'data', 'yukon' )
 if not os.path.exists(sWorkspace_data):
@@ -143,10 +143,16 @@ oPyhexwatershed.pPyFlowline.iFlag_user_provided_binary = 0
 oPyhexwatershed.pyhexwatershed_setup()
 #run step 1
 aCell_origin = oPyhexwatershed.pyhexwatershed_run_pyflowline()
-oPyhexwatershed.pyhexwatershed_assign_elevation_to_cells()
+oPyhexwatershed.pyhexwatershed_assign_elevation_to_cells(dMissing_value_in=-9999)
 aCell_new = oPyhexwatershed.pyhexwatershed_update_outlet(aCell_origin)
 oPyhexwatershed.pPyFlowline.pyflowline_export()
 oPyhexwatershed.pyhexwatershed_export_config_to_json()
 oPyhexwatershed.pyhexwatershed_run_hexwatershed()
-oPyhexwatershed.pyhexwatershed_analyze()
 oPyhexwatershed.pyhexwatershed_export()
+#oPyhexwatershed.plot( sVariable_in = 'elevation',dData_min_in=0, iFlag_colorbar_in=1)
+#oPyhexwatershed.plot( sVariable_in = 'flow_direction')
+#oPyhexwatershed.plot( sVariable_in = 'drainage_area',dData_min_in=0 , iFlag_colorbar_in=1)
+#oPyhexwatershed.plot( sVariable_in = 'travel_distance',dData_min_in=0, iFlag_colorbar_in=1)
+print('Finished the simulation.')
+
+

@@ -1,4 +1,4 @@
-name: python 3.10
+name: hexwatershed
 channels:
   - conda-forge
 dependencies:
@@ -12,7 +12,7 @@ dependencies:
   - cartopy
   - geopandas
   - libgdal-arrow-parquet
-  - pyearth=0.1.25
-  - pyflowline=0.3.9
+  - pyearth=0.1.26
+  - pyflowline=0.3.10
   - hexwatershed=0.2.30
 
