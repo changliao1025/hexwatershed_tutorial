@@ -1,4 +1,4 @@
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/changliao1025/hexwatershed_tutorial/HEAD?labpath=notebooks%2Fyukon%2Fdggrid_example.ipynb) (right click to open in a new window)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/changliao1025/hexwatershed_tutorial/HEAD) (right click to open in a new window)
 
 # Introduction
 
