@@ -21,9 +21,9 @@ You can use QGIS to visualize some of the model results.
 
 1. Install the HexWatershed Python package through Conda
 
-- `conda create --name hexwatershed python=3.8`
+- `conda create --name hexwatershed_tutorial python numpy gdal cartopy libgdal-arrow-parquet pyearth pyflowline`
 
-- `conda activate hexwatershed`
+- `conda activate hexwatershed_tutorial`
 
 - `conda install -c conda-forge hexwatershed`
 
@@ -31,7 +31,7 @@ You can use QGIS to visualize some of the model results.
 
    `git clone https://github.com/changliao1025/hexwatershed_tutorial.git`
 
-3. Run the examples within the `example` folder
+3. Run the examples within the `examples` or `notebooks` folder
 
 - Edit the template `configuration` json file to match with your data set paths.
 
@@ -61,11 +61,11 @@ You can use QGIS to visualize some of the model results.
 
    Anaconda:
 
-   `export PROJ_LIB=/people/user/.conda/envs/hexwatershed/share/proj`
+   `export PROJ_LIB=/people/user/.conda/envs/hexwatershed_tutorial/share/proj`
 
    Miniconda:
 
-   `export PROJ_LIB=/opt/miniconda3/envs/hexwatershed/share/proj`
+   `export PROJ_LIB=/opt/miniconda3/envs/hexwatershed_tutorial/share/proj`
 
 4. What if my model doesn't produce the correct or expected answer?
 
