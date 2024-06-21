@@ -36,27 +36,30 @@ if not os.path.exists(sWorkspace_output):
     os.makedirs(sWorkspace_output)
 
 #create a temp folder to download data
-sPath_temp = os.path.join( sPath_parent ,  'data', 'tmp' )
-if not os.path.exists(sPath_temp):
-    print(sPath_temp)
-    os.makedirs(sPath_temp)
-else:
+iFlag_download_data = 0
+
+if iFlag_download_data == 1:
+    sPath_temp = os.path.join( sPath_parent ,  'data', 'tmp' )
+    if not os.path.exists(sPath_temp):
+        print(sPath_temp)
+        os.makedirs(sPath_temp)
+    else:
+        shutil.rmtree(sPath_temp)
+
+    # specify the repository's URL
+    hexwatershed_data_repo = 'https://github.com/changliao1025/hexwatershed_data.git'
+    # clone the repository
+    os.system(f'git clone {hexwatershed_data_repo} {sPath_temp}')
+    sPath_temp_data = os.path.join( sPath_parent ,  'data', 'tmp', 'data','yukon', 'input' )
+
+    #copy all the files under the temp data folder using shutil
+    #check if the destination directory exists, if exists, remove it
+    if os.path.exists(sWorkspace_input):
+        shutil.rmtree(sWorkspace_input)
+
+    shutil.copytree(sPath_temp_data, sWorkspace_input)
+    #delte the temp folder
     shutil.rmtree(sPath_temp)
-
-# specify the repository's URL
-hexwatershed_data_repo = 'https://github.com/changliao1025/hexwatershed_data.git'
-# clone the repository
-os.system(f'git clone {hexwatershed_data_repo} {sPath_temp}')
-sPath_temp_data = os.path.join( sPath_parent ,  'data', 'tmp', 'data','yukon', 'input' )
-
-#copy all the files under the temp data folder using shutil
-#check if the destination directory exists, if exists, remove it
-if os.path.exists(sWorkspace_input):
-    shutil.rmtree(sWorkspace_input)
-
-shutil.copytree(sPath_temp_data, sWorkspace_input)
-#delte the temp folder
-shutil.rmtree(sPath_temp)
 
 #an example of the configuration file are provided in the input folder
 sFilename_configuration_in = realpath( sWorkspace_input +  '/pyhexwatershed_yukon_dggrid.json' )
@@ -72,8 +75,8 @@ print('Finished the data preparation step.')
 #set up some parameters
 sMesh_type = 'dggrid' #the dggrid mesh type supported by hexwatershed
 sDggrid_type = 'ISEA3H' #a type of dggrid mesh
-iCase_index = 1 #a case index for bookmark
-iResolution_index = 10 #dggrid resolution index, see dggrid documentation for details.
+iCase_index = 2 #a case index for bookmark
+iResolution_index = 11 #dggrid resolution index, see dggrid documentation for details.
 iFlag_stream_burning_topology = 1 #see hexwatershed documentation for details
 iFlag_use_mesh_dem = 0
 iFlag_elevation_profile = 0 #reserved for future use
@@ -84,8 +87,6 @@ iMonth = today.month
 iDay = today.day
 print("Today's date:", iYear, iMonth, iDay)
 sDate = str(iYear) + str(iMonth).zfill(2) + str(iDay).zfill(2) #the date is also a bookmark to label a simulation
-
-
 
 from pyflowline.mesh.dggrid.create_dggrid_mesh import dggrid_find_resolution_by_index
 dResolution = dggrid_find_resolution_by_index(sDggrid_type, iResolution_index)
@@ -130,14 +131,15 @@ oPyhexwatershed = pyhexwatershed_read_configuration_file(sFilename_configuration
 dLongitude_outlet_degree= -164.47594
 dLatitude_outlet_degree= 63.04269
 oPyhexwatershed.pPyFlowline.aBasin[0].dThreshold_small_river = dResolution * 5
+oPyhexwatershed.pPyFlowline.aBasin[0].dAccumulation_threshold = 0.01
 oPyhexwatershed.pPyFlowline.pyflowline_change_model_parameter('dLongitude_outlet_degree', dLongitude_outlet_degree, iFlag_basin_in= 1)
 oPyhexwatershed.pPyFlowline.pyflowline_change_model_parameter('dLatitude_outlet_degree', dLatitude_outlet_degree, iFlag_basin_in= 1)
 #we want to change the flowline file, which is a geojson file
-sFilename_flowline = realpath(os.path.join(sWorkspace_input, 'dggrid10/river_networks.geojson') )
+sFilename_flowline = realpath(os.path.join(sWorkspace_input, 'dggrid11/river_networks.geojson') )
 oPyhexwatershed.pPyFlowline.pyflowline_change_model_parameter('sFilename_flowline_filter', sFilename_flowline, iFlag_basin_in= 1)
 oPyhexwatershed.pPyFlowline.pyflowline_change_model_parameter('iFlag_debug', 0, iFlag_basin_in= 1)
 
-oPyhexwatershed.iFlag_user_provided_binary = 0
+oPyhexwatershed.iFlag_user_provided_binary = 1
 oPyhexwatershed.pPyFlowline.iFlag_user_provided_binary = 0
 
 oPyhexwatershed.pyhexwatershed_setup()
@@ -153,6 +155,10 @@ oPyhexwatershed.pyhexwatershed_export()
 #oPyhexwatershed.plot( sVariable_in = 'flow_direction')
 #oPyhexwatershed.plot( sVariable_in = 'drainage_area',dData_min_in=0 , iFlag_colorbar_in=1)
 #oPyhexwatershed.plot( sVariable_in = 'travel_distance',dData_min_in=0, iFlag_colorbar_in=1)
+sFilename = os.path.join(  oPyhexwatershed.sWorkspace_output_hexwatershed, 'subbasin.png')
+oPyhexwatershed.plot( sVariable_in = 'subbasin',dData_min_in=0, iFlag_colorbar_in=1, sFilename_output_in = sFilename)
+sFilename = os.path.join(  oPyhexwatershed.sWorkspace_output_hexwatershed, 'hillslope.png')
+oPyhexwatershed.plot( sVariable_in = 'hillslope',dData_min_in=0, iFlag_colorbar_in=1, sFilename_output_in = sFilename)
 print('Finished the simulation.')
 
 
